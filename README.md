@@ -64,6 +64,8 @@ insert the manifest.json link in all html pages
 
 `  <link rel="manifest" href="/manifest.json"> `
 
+in `manifest.json`
+<script src="https://gist.github.com/superoo7/399b7646c10581eb3f03b59d80ac03d4.js"></script>
 
 ### Resources
 
