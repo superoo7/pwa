@@ -123,7 +123,8 @@ Service Worker are JS that access to DOM, they run different single thread. They
 	- Service Worker Phase changes
 
 ### Service Worker Lifecycle
-![]()
+![service-lifecycle](img/service-lifecycle.png)
+
 
 ### Register Service Worker
 - service worker js file is located at root
@@ -131,14 +132,14 @@ Service Worker are JS that access to DOM, they run different single thread. They
 - Register in all html (save in app.js)
 - the code: 
 
-				if ('serviceWorker' in navigator) {
-					// service worker available
-					navigator.serviceWorker
-						.register('/sw.js')
-						.then(function() {
-							console.log('Service Worker registered');
-						});
-				}
+		if ('serviceWorker' in navigator) {
+			// service worker available
+			navigator.serviceWorker
+				.register('/sw.js', {scope: '/help'/})
+				.then(function() {
+					console.log('Service Worker registered');
+				});
+		}
 
 
 
