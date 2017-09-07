@@ -11,8 +11,9 @@ Tools that I might use :-
 * Polymer 2.0
 
 # Table of Content
+i)	[What are the features of PWA](#feature)
 
-### What feature of PWA?
+### What are the features of PWA <a name="feature"></a>
 * Reliable
 * Fast
 * Engaging
@@ -58,7 +59,7 @@ PWA
 - For new project, fully implement PWA
 
 ### Downloadable PWA
-use web manifest `manidest.json`
+use web manifest `manifest.json`
 
 insert the manifest.json link in all html pages
 
@@ -87,6 +88,20 @@ in [`manifest.json`](https://gist.github.com/superoo7/399b7646c10581eb3f03b59d80
     <meta name="msapplication-TitleImage" content="src/images/icons/app-icon-144x144.png">
     <meta name="msapplication-TitleColor" content="#fff">
     <meta name="theme-color" content="#3f51b5">
+
+### Service Worker
+![Service Worker](/img/service-worker.png)
+Normal way (Angular, React or Vue or whatsoever), web app run on single thread with HTML with loaded JS. JS can manipulate the DOM.
+
+Service Worker can listen to specific events by the server, able to use push notification.
+
+
+
+### Useful Link
+* [Web App Manifest - Browser Support](http://caniuse.com/#feat=web-app-manifest)
+* [MDN Article on the Web App Manifest (includes List of all Properties)](https://developer.mozilla.org/en-US/docs/Web/Manifest)
+* [A detailed Web App Manifest Explanation by Google](https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/)
+* [More about the "Web App Install Banner" (including Requirements)](https://developers.google.com/web/fundamentals/engage-and-retain/app-install-banners/)
 
 ### Resources
 
