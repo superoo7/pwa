@@ -90,10 +90,55 @@ in [`manifest.json`](https://gist.github.com/superoo7/399b7646c10581eb3f03b59d80
     <meta name="theme-color" content="#3f51b5">
 
 ### Service Worker
-![Service Worker](/img/service-worker.png)
-Normal way (Angular, React or Vue or whatsoever), web app run on single thread with HTML with loaded JS. JS can manipulate the DOM.
+_Function_
+* Apps work offline
+* Push notification
+* Background synchronization
 
-Service Worker can listen to specific events by the server, able to use push notification.
+![Service Worker](/img/service-worker.png)
+
+Normal way (Angular, React or Vue or whatsoever), web app run on single thread with HTML with loaded JS. JS can manipulate the DOM, allow to use SPA and widgets
+
+Service Worker are JS that access to DOM, they run different single thread. They can listen to specific events by the server, able to use push notification. They run on background and they decoupled from HTML pages.
+
+### Listen to Event
+* Fetch
+	- Browser or Page-related JS initiates a Fetch (HTTP Request)
+	- Maybe IMG tag 
+	- React fetch request with Service Worker (can assume they work like proxy)
+	- using Fetch API
+	- can manipulate the request
+* Push Notification
+	- From another server
+	- Chrome/Firefox has push server
+	- Vendor server sent push notification to the user (receive with service worker)
+	- Service Worker receives Web Push Notification (from Server)
+	- Alert user 
+* Notification Interaction
+	- User interacts with displayed Notification
+* Background Sync
+	- Bad internet connection, normally will fail
+	- Store certain action, execute when the internet is ok back
+* Service Worker Lifecycle
+	- Service Worker Phase changes
+
+### Service Worker Lifecycle
+![]()
+
+### Register Service Worker
+- service worker js file is located at root
+- any name, `sw.js`
+- Register in all html (save in app.js)
+- the code: 
+
+				if ('serviceWorker' in navigator) {
+					// service worker available
+					navigator.serviceWorker
+						.register('/sw.js')
+						.then(function() {
+							console.log('Service Worker registered');
+						});
+				}
 
 
 
